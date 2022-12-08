@@ -1,20 +1,56 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import { NativeBaseProvider } from 'native-base';
+import { StyleSheet} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+import LoginScreen from "./screens/LoginScreen";
+
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>NApis!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NativeBaseProvider>
+      <NavigationContainer>
+        <Drawer.Navigator
+            screenOptions={{
+              headerTitle: "Lab2",
+
+            }}>
+          <Drawer.Screen name="Login" component={LoginScreen} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+      </NativeBaseProvider>
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center"
+  },
+
+  TextInput: {
+    height: 40,
+    width: 300,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+
+  text:{
+    fontSize: 24,
+    marginBottom: 20,
+  },
+
+  bigBlue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red: {
+    color: 'red',
   },
 });
