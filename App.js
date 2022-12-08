@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import LoginScreen from "./screens/LoginScreen";
+import MainScreen from "./screens/MainScreen";
+import DetailsScreen from "./screens/DetailsScreen";
 
 
 const Drawer = createDrawerNavigator();
@@ -15,9 +17,11 @@ export default function App() {
       <NavigationContainer>
         <Drawer.Navigator
             screenOptions={{
-              headerShown: false
-            }}>
+              headerShown: true,
+        }}>
           <Drawer.Screen name="Login" component={LoginScreen} />
+          <Drawer.Screen name="MainScreen" component={MainScreen} />
+          <Drawer.Screen name="DetailsScreen" component={DetailsScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
       </NativeBaseProvider>

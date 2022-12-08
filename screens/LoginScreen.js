@@ -1,12 +1,13 @@
 
-import {Box, Button, Center, FormControl, Heading, HStack, Image, Input, Link, VStack} from "native-base";
+import {Box, Button, Center, FormControl, Heading, Stack, Image, Input, Link, VStack} from "native-base";
 import {Text} from "react-native";
+import MainScreen from "./MainScreen";
 
 export default function LoginScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <Image
             source={require("./logo.png")}
-            style={{width: 150, height: 150, borderRadius: 100}}
+            style={{width: 180, height: 180, borderRadius: 100}}
             alt={"Alt"}
         />
         <Box safeArea mb="20" p="2" py="8" w="90%" >
@@ -33,7 +34,7 @@ export default function LoginScreen({navigation}){
                     <Input type="password" backgroundColor="white"/>
                 </FormControl>
                 <Center>
-                <Button borderRadius="10" mt="3" color="#63C5C5" width="150">
+                <Button borderRadius="10" mt="3" color="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
                     Zaloguj
                 </Button>
                 </Center>
