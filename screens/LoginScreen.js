@@ -4,8 +4,8 @@ import {Text} from "react-native";
 import { NativeBaseProvider } from 'native-base';
 
 export default function LoginScreen({navigation}){
-    return <Center w="100%">
-        <Box safeArea p="2" py="8" w="90%" maxW="290">
+    return <Center w="100%" backgroundColor="#F4BD57">
+        <Box safeArea p="2" py="8" w="100%" maxW="290">
             <Heading size="lg" fontWeight="600" color="coolGray.800" _dark={{
                 color: "warmGray.50"
             }}>
@@ -17,7 +17,7 @@ export default function LoginScreen({navigation}){
                 Sign in to continue!
             </Heading>
 
-            <VStack space={3} mt="5">
+            <VStack space={10} mt="20">
                 <FormControl>
                     <FormControl.Label>Email ID</FormControl.Label>
                     <Input />
