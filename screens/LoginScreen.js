@@ -1,13 +1,13 @@
 
 import {Box, Button, Center, FormControl, Heading, HStack, Image, Input, Link, VStack} from "native-base";
 import {Text} from "react-native";
-import { NativeBaseProvider } from 'native-base';
 
 export default function LoginScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
-        <Image size={150} borderRadius={100} source={{
-            uri: "https://wallpaperaccess.com/full/317501.jpg"
-        }} alt="Alternate Text" />
+        <Image
+            source={require("./logo.png")}
+            style={{width: 150, height: 150, borderRadius: 100}}
+        />
         <Box safeArea p="2" py="8" w="100%" maxW="290">
             <Heading size="lg"  fontWeight="600" color="coolGray.800" _dark={{
                 color: "warmGray.50"
