@@ -1,23 +1,20 @@
 
-import {Box, Button, Center, FormControl, Heading, HStack, Input, Link, VStack} from "native-base";
+import {Box, Button, Center, FormControl, Heading, HStack, Image, Input, Link, VStack} from "native-base";
 import {Text} from "react-native";
 import { NativeBaseProvider } from 'native-base';
 
 export default function LoginScreen({navigation}){
-    return <Center w="100%" backgroundColor="#F4BD57">
+    return <Center w="100%" h="100%" backgroundColor="#F4BD57">
+        <Image size={150} borderRadius={100} source={{
+            uri: "https://wallpaperaccess.com/full/317501.jpg"
+        }} alt="Alternate Text" />
         <Box safeArea p="2" py="8" w="100%" maxW="290">
-            <Heading size="lg" fontWeight="600" color="coolGray.800" _dark={{
+            <Heading size="lg"  fontWeight="600" color="coolGray.800" _dark={{
                 color: "warmGray.50"
             }}>
-                Welcome
             </Heading>
-            <Heading mt="1" _dark={{
-                color: "warmGray.200"
-            }} color="coolGray.600" fontWeight="medium" size="xs">
-                Sign in to continue!
-            </Heading>
-
-            <VStack space={10} mt="20">
+            <Box>
+            <VStack space={10} mt="10">
                 <FormControl>
                     <FormControl.Label>Email ID</FormControl.Label>
                     <Input />
@@ -33,7 +30,7 @@ export default function LoginScreen({navigation}){
                         Forget Password?
                     </Link>
                 </FormControl>
-                <Button mt="2" colorScheme="indigo">
+                <Button color="#63C5C5" width="150"  ml="60">
                     Sign in
                 </Button>
                 <HStack mt="6" justifyContent="center">
@@ -51,6 +48,7 @@ export default function LoginScreen({navigation}){
                     </Link>
                 </HStack>
             </VStack>
+            </Box>
         </Box>
-    </Center>;
+    </Center>
 };

@@ -15,8 +15,7 @@ export default function App() {
       <NavigationContainer>
         <Drawer.Navigator
             screenOptions={{
-              headerTitle: "Lab2",
-
+              headerShown: false
             }}>
           <Drawer.Screen name="Login" component={LoginScreen} />
         </Drawer.Navigator>
