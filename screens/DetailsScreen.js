@@ -1,12 +1,21 @@
-import {Button, Text, View} from "native-base";
+import {Box, Button, Center, Heading, Image, Text, View} from "native-base";
 import {StyleSheet} from "react-native";
 
 export default function DetailsScreen({navigation}){
     return(
-        <View style={styles.container}>
-            <Text style={styles.text}>Drugi ekran nawigacji BottomTabs</Text>
-            <Button title='Go back' onPress={() => navigation.goBack()}></Button>
-        </View>
+        <Center w="100%" h="100%" backgroundColor="#F4BD57">
+            <Image
+                source={require("./logo.png")}
+                style={{width: 60, height: 60, borderRadius: 100}}
+                alt={"Alt"}
+            />
+            <Box safeArea mb="20" p="2" py="8" w="90%" >
+                <Heading size="lg"  fontWeight="600" color="coolGray.800" _dark={{
+                    color: "warmGray.50"
+                }}>
+                </Heading>
+            </Box>
+        </Center>
     );
 }
 

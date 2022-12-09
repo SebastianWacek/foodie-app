@@ -17,11 +17,10 @@ export default function App() {
       <NavigationContainer>
         <Drawer.Navigator
             screenOptions={{
-              headerShown: true,
+              headerShown: false,
         }}>
           <Drawer.Screen name="Login" component={LoginScreen} />
           <Drawer.Screen name="MainScreen" component={MainScreen} />
-          <Drawer.Screen name="DetailsScreen" component={DetailsScreen} />
         </Drawer.Navigator>
       </NavigationContainer>
       </NativeBaseProvider>
