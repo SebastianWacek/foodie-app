@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Text,StyleSheet, View } from 'react-native';
+import { Text,StyleSheet, View, ImageBackground } from 'react-native';
 import {Box, Button, Center, Heading, Image, Input, ScrollView} from "native-base";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import LoginScreen from "./LoginScreen";
@@ -119,15 +119,38 @@ export default function MainScreen({navigation}){
             </SafeAreaView>
                 </ScrollView>
 
+
+
+
+{/* Propozycje dla ciebie */}
             <Text style={{marginTop:10, marginLeft:20, fontSize:20 }}>Propozycje dla ciebie</Text>
            
             <ScrollView>
-                <View backgroundColor="grey"> 
+                <SafeAreaView  style={{width: 360, height:120 ,marginLeft: 15, marginRight: 15}}>
+                <ImageBackground source={require("./carbonara.png")} style={{width: '100%', height: '100%'}}>
+                     
+                        <Text style={{color: 'white', fontSize: 16, top:70, left: 190}}>Spaghetti Carbonara</Text>
+                       
+                </ImageBackground>
+            </SafeAreaView>
 
-                </View>
+            <SafeAreaView  style={{width: 360, height:120 ,marginLeft: 15, marginRight: 15}}>
+                <ImageBackground source={require("./homar.png")} style={{width: '100%', height: '100%'}}>
+                     
+                        <Text style={{color: 'white', fontSize: 16, top:70, left: 190}}>Homar</Text>
+                       
+                </ImageBackground>
+            </SafeAreaView>
             
+            <SafeAreaView  style={{width: 360, height:120 ,marginLeft: 15, marginRight: 15}}>
+                <ImageBackground source={require("./sushi.png")} style={{width: '100%', height: '100%'}}>
+                     
+                        <Text style={{color: 'white', fontSize: 16, top:70, left: 190}}>Sushi</Text>
+                       
+                </ImageBackground>
+            </SafeAreaView>
 
-            </ScrollView>
+                </ScrollView>
             </ScrollView>
         </Center>
     );
