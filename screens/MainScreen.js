@@ -5,7 +5,7 @@ import {Box, Button, Center, Heading, Image, Input, ScrollView} from "native-bas
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import LoginScreen from "./LoginScreen";
 import DetailsScreen from "./DetailsScreen";
-
+import Localization from "./Localization";
 
 export default function MainScreen({navigation}){
     return (
@@ -24,6 +24,12 @@ export default function MainScreen({navigation}){
                     color: "warmGray.50"
                 }}>
                 </Heading>
+
+            </Box>
+            <Box>
+                <Button borderRadius="10" mt="3" color="#63C5C5" width="150" onPress={()=>navigation.navigate('Localization')} >
+                    Zlokalizuj
+                </Button>
             </Box>
         </Center>
     );
