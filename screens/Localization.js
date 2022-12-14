@@ -52,7 +52,7 @@ export default function Localization({navigation}) {
 </View>
             <Center flex="1">
             <View>
-                <Button borderRadius="10" mt="3" color="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
+                <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
                     Potwierdź
                 </Button>
             </View>
