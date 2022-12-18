@@ -6,10 +6,12 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import LoginScreen from "./screens/LoginScreen";
 import MainScreen from "./screens/MainScreen";
-import DetailsScreen from "./screens/DetailsScreen";
+import DetailsScreen from "./screens/RestaurantScreen";
 import {createStackNavigator} from "@react-navigation/stack";
 import Localization from "./screens/Localization";
-
+import PaymentScreen from "./screens/PaymentScreen";
+import BasketScreen from "./screens/BasketScreen";
+import RestaurantScreen from "./screens/RestaurantScreen";
 
 
 const Stack = createStackNavigator();
@@ -25,6 +27,9 @@ export default function App() {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="MainScreen" component={MainScreen} />
           <Stack.Screen name="Localization" component={Localization} />
+          <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+          <Stack.Screen name="BasketScreen" component={BasketScreen} />
+          <Stack.Screen name="RestaurantScreen" component={RestaurantScreen} />
         </Stack.Navigator>
       </NavigationContainer>
       </NativeBaseProvider>

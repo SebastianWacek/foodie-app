@@ -6,7 +6,7 @@ import MainScreen from "./MainScreen";
 export default function LoginScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <Image
-            source={require("./logo.png")}
+            source={require("./images/logo.png")}
             style={{width: 180, height: 180, borderRadius: 100}}
             alt={"Alt"}
         />
