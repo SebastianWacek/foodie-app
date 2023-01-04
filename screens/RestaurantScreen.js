@@ -180,6 +180,7 @@ export default function RestaurantScreen({route, navigation}){
             <TouchableOpacity>
                 <Button
                     style={styles.floatingButton}
+                    onPress = {()=>navigation.navigate('BasketScreen')}
                 >Zamawiam
                 </Button>
             </TouchableOpacity>

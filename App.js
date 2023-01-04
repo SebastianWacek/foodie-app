@@ -12,7 +12,7 @@ import Localization from "./screens/Localization";
 import PaymentScreen from "./screens/PaymentScreen";
 import BasketScreen from "./screens/BasketScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
-
+import HistoryScreen from "./screens/HistoryScreen"
 
 const Stack = createStackNavigator();
 
@@ -30,6 +30,7 @@ export default function App() {
           <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
           <Stack.Screen name="BasketScreen" component={BasketScreen} />
           <Stack.Screen name="RestaurantScreen" component={RestaurantScreen} />
+          <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
         </Stack.Navigator>
       </NavigationContainer>
       </NativeBaseProvider>

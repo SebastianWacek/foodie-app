@@ -3,6 +3,7 @@ import {StyleSheet, Text, TouchableHighlight, TouchableOpacity} from "react-nati
 import { NativeBaseProvider } from 'native-base';
 import {Image} from 'native-base';
 import {useState} from "react";
+import HistoryScreen from './HistoryScreen'
 
 export default function PaymentScreen({navigation}){
     const [index, setIndex] = useState(null);
@@ -97,7 +98,7 @@ export default function PaymentScreen({navigation}){
                     Wprowadź adres
                 </Button>
 
-                <Button mt="2" backgroundColor="#63C5C5" width="180" height="20" borderRadius="10">
+                <Button mt="2" backgroundColor="#63C5C5" width="180" height="20" borderRadius="10" onPress={()=>navigation.navigate('HistoryScreen')}>
                     Zamawiam
                 </Button>
             </Center>

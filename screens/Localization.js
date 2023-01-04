@@ -4,7 +4,7 @@ import {SafeAreaView, StyleSheet, TouchableOpacity} from "react-native";
 import MainScreen from "./MainScreen";
 
 export default function Localization({navigation}) {
-
+let alt = "Nie ma";
     const clickHandler = () => {
         navigation.goBack()
     }
@@ -25,7 +25,7 @@ export default function Localization({navigation}) {
                         longitude: 20.66352}}
                     title={"Sushi"}
                     description={"Tu zjesz pyszne sushi"}>
-                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} />
+                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} alt={alt}/>
                 </Marker>
                 <Marker
                     coordinate={{
@@ -33,7 +33,7 @@ export default function Localization({navigation}) {
                         longitude: 20.62352}}
                     title={"Kebab"}
                     description={"Tu dobre kebsy"}>
-                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} />
+                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} alt={alt} />
                 </Marker>
                 <Marker
                     coordinate={{
@@ -41,7 +41,7 @@ export default function Localization({navigation}) {
                         longitude: 20.60352}}
                     title={"Kuchnia polska"}
                     description={"Rosołek jak u mamy"}>
-                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} />
+                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} alt={alt}/>
                 </Marker>
 
                 <Marker
@@ -50,7 +50,7 @@ export default function Localization({navigation}) {
                         longitude: 20.62352}}
                     title={"Kuchnia orientalna"}
                     description={"我是从波兰来的/我是"}>
-                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} />
+                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} alt={alt}/>
                 </Marker>
 
                 <Marker
@@ -59,7 +59,7 @@ export default function Localization({navigation}) {
                         longitude: 20.64592}}
                     title={"Homary"}
                     description={"Owoce morza"}>
-                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} />
+                    <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} alt={alt}/>
                 </Marker>
 
                 <Marker
@@ -68,7 +68,7 @@ export default function Localization({navigation}) {
                         longitude: 20.62592}}
                     title={"Pizza"}
                     description={"Pizza z Włoch"}>
-                <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} />
+                <Image source={require("./images/marker.png")} style={{height: 35, width:35 }} alt={alt}/>
                 </Marker>
             </MapView>
             <TouchableOpacity
@@ -77,7 +77,7 @@ export default function Localization({navigation}) {
                 style={styles.touchableOpacityStyle}>
                 <Image
                     source={require('./images/arrow.png')}
-                    alt={"Alt"}
+                    alt={alt}
                     style={styles.floatingButtonStyle}
 
                 />
@@ -98,7 +98,7 @@ export default function Localization({navigation}) {
 </View>
             <Center flex="1">
             <View>
-                <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
+                <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.goBack()} >
                     Potwierdź
                 </Button>
             </View>
