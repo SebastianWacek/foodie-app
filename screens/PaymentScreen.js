@@ -3,10 +3,14 @@ import {StyleSheet, Text, TouchableHighlight, TouchableOpacity} from "react-nati
 import { NativeBaseProvider } from 'native-base';
 import {Image} from 'native-base';
 import {useState} from "react";
+
 import HistoryScreen from './HistoryScreen'
 
 export default function PaymentScreen({navigation}){
+
+
     const [index, setIndex] = useState(null);
+
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <TouchableOpacity
             activeOpacity={2}
