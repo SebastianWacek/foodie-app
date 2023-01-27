@@ -6,7 +6,7 @@ import MainScreen from "./MainScreen";
 export default function LoginScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <Image
-            source={require("./logo.png")}
+            source={require("./images/logo.png")}
             style={{width: 180, height: 180, borderRadius: 100}}
             alt={"Alt"}
         />
@@ -34,11 +34,11 @@ export default function LoginScreen({navigation}){
                     <Input type="password" backgroundColor="white"/>
                 </FormControl>
                 <Center>
-                <Button borderRadius="10" mt="3" color="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
+                <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
                     Zaloguj
                 </Button>
                 </Center>
-                <VStack mb="6" alignItems="center">
+                <VStack mb="3" alignItems="center">
                      <Link _text={{
                         color: "indigo.500",
                         fontWeight: "small",

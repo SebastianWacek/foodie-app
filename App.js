@@ -6,22 +6,32 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import LoginScreen from "./screens/LoginScreen";
 import MainScreen from "./screens/MainScreen";
-import DetailsScreen from "./screens/DetailsScreen";
+import DetailsScreen from "./screens/RestaurantScreen";
+import {createStackNavigator} from "@react-navigation/stack";
+import Localization from "./screens/Localization";
+import PaymentScreen from "./screens/PaymentScreen";
+import BasketScreen from "./screens/BasketScreen";
+import RestaurantScreen from "./screens/RestaurantScreen";
+import HistoryScreen from "./screens/HistoryScreen"
 
-
-const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
       <NativeBaseProvider>
       <NavigationContainer>
-        <Drawer.Navigator
+        <Stack.Navigator
             screenOptions={{
               headerShown: false,
         }}>
-          <Drawer.Screen name="Login" component={LoginScreen} />
-          <Drawer.Screen name="MainScreen" component={MainScreen} />
-        </Drawer.Navigator>
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="MainScreen" component={MainScreen} />
+          <Stack.Screen name="Localization" component={Localization} />
+          <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+          <Stack.Screen name="BasketScreen" component={BasketScreen} />
+          <Stack.Screen name="RestaurantScreen" component={RestaurantScreen} />
+          <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
+        </Stack.Navigator>
       </NavigationContainer>
       </NativeBaseProvider>
   );
