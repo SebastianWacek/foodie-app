@@ -21,18 +21,18 @@ export default function Localization({navigation}) {
         navigation.goBack()
     }
 
+    // odczytanie odpowiednich wartosci z odpowiedzi API (OpenStreetMap)
     const setAddressFields = async (addressInfo) => {
         try {
             const cityVillage = addressInfo.address.city || addressInfo.address.village;
             const postCode = addressInfo.address.postcode;
             const road = addressInfo.address.road;
-            const postCity = addressInfo.address.municipality;
             const houseNumber = addressInfo.address.house_number;
+            // jezeli dane sa poprawne i istnieja
             if (addressInfo) {
                 setAddress(addressInfo);
                 const cityVillageInsertVal = cityVillage ? cityVillage : '';
                 const postCodeInsertVal = postCode ? postCode : '';
-                const postCityInsertVal = postCity ? postCity : cityVillage;
                 const roadInsertVal = road ? road : '';
                 const houseNumberInsertVal = houseNumber ? houseNumber : '';
                 setCity(cityVillageInsertVal);
@@ -48,6 +48,7 @@ export default function Localization({navigation}) {
         }
     }; 
 
+    // odpytanie API za pomoca danych GPS aby pobrac informacje o adresie z internetu
     const getAddress = async (lat, lon) => {
         try {
             const response = await axios.get(
@@ -60,6 +61,7 @@ export default function Localization({navigation}) {
         }
     };
 
+    // pobranie zezwolenia na lokalizacje
     const getLocationPermission = async () => {
         try {
             let { status } = await Location.requestForegroundPermissionsAsync();
@@ -77,6 +79,8 @@ export default function Localization({navigation}) {
         }
     };
 
+    // uruchomienie pobierania adresu
+    // z przycisku
     const getLocation = async () => {
         setWaitingForLocation(true);
 
