@@ -1,10 +1,8 @@
-
 import {Box, Button, Center, FormControl, Heading, Stack, Image, Input, Link, VStack} from "native-base";
 import {Text} from "react-native";
-import MainScreen from "./MainScreen";
-import RegisterScreen from "./RegisterScreen";
+import LoginScreen from "./LoginScreen";
 
-export default function LoginScreen({navigation}){
+export default function RegisterScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <Image
             source={require("./images/logo.png")}
@@ -34,27 +32,30 @@ export default function LoginScreen({navigation}){
                     </FormControl.Label>
                     <Input type="password" backgroundColor="white"/>
                 </FormControl>
+                <FormControl>
+                    <FormControl.Label>
+                        <Text style = {{fontSize: 25, fontWeight: "bold"}}>
+                       Potwierdź hasło
+                        </Text>
+                    </FormControl.Label>
+                    <Input type="password" backgroundColor="white"/>
+                </FormControl>
                 <Center>
                 <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
-                    Zaloguj
+                    Zarejestruj
                 </Button>
                 </Center>
                 <VStack mb="3" alignItems="center">
-                <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('RegisterScreen')} >
-                    rejestracja
-                </Button>
+                     <Link _text={{
+                        color: "indigo.500",
+                        fontWeight: "small",
+                        fontSize: "sm"
+                    }} onPress={()=>navigation.navigate('Login')}>
+                        Zaloguj się
+                    </Link>
                 </VStack>
             </VStack>
             </Box>
         </Box>
-        <VStack mt="13" mb="-10" alignItems="center">
-            <Link _text={{
-                color: "indigo.500",
-                fontWeight: "small",
-                fontSize: "sm"
-            }} href="#">
-                Nie pamiętasz hasła?
-            </Link>
-        </VStack>
     </Center>
 };

@@ -14,6 +14,7 @@ import kebsy from "./images/kebab.png";
 import kuchniaOrientalna from "./images/orientalne.png";
 import spaghetti from "./images/carbonara.png";
 import homar from "./images/homar.png";
+import RegisterScreen from './RegisterScreen';
 
 export default function MainScreen({navigation}){
 
