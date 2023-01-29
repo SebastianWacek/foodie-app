@@ -17,34 +17,34 @@ export default function LoginScreen({navigation}){
             }}>
             </Heading>
             <Box>
-            <VStack space={8} mt="1">
-                <FormControl>
-                    <FormControl.Label>
-                        <Text style = {{fontSize: 25, fontWeight: "bold"}}>
-                        Login
-                        </Text>
-                    </FormControl.Label>
-                    <Input w="100%"  backgroundColor="white"/>
-                </FormControl>
-                <FormControl>
-                    <FormControl.Label>
-                        <Text style = {{fontSize: 25, fontWeight: "bold"}}>
-                       Hasło
-                        </Text>
-                    </FormControl.Label>
-                    <Input type="password" backgroundColor="white"/>
-                </FormControl>
-                <Center>
-                <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
-                    Zaloguj
-                </Button>
-                </Center>
-                <VStack mb="3" alignItems="center">
-                    <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('RegisterScreen')} >
-                        rejestracja
-                    </Button>
+                <VStack space={8} mt="1">
+                    <FormControl>
+                        <FormControl.Label>
+                            <Text style = {{fontSize: 25, fontWeight: "bold"}}>
+                                Login
+                            </Text>
+                        </FormControl.Label>
+                        <Input w="100%"  backgroundColor="white"/>
+                    </FormControl>
+                    <FormControl>
+                        <FormControl.Label>
+                            <Text style = {{fontSize: 25, fontWeight: "bold"}}>
+                                Hasło
+                            </Text>
+                        </FormControl.Label>
+                        <Input type="password" backgroundColor="white"/>
+                    </FormControl>
+                    <Center>
+                        <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
+                            Zaloguj
+                        </Button>
+                    </Center>
+                    <VStack mb="3" alignItems="center">
+                        <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('RegisterScreen')} >
+                            rejestracja
+                        </Button>
+                    </VStack>
                 </VStack>
-            </VStack>
             </Box>
         </Box>
         <VStack mt="13" mb="-10" alignItems="center">
