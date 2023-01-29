@@ -187,15 +187,15 @@ export default function Localization({navigation}) {
                 </View>
                 <Center flex="1">
                 <View>
-                    <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.goBack()} >
-                        Potwierdź
-                    </Button>
-                </View>
-                <View>
                     <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>getLocation()} >
                         Pobierz lokalizację
                     </Button>
                 </View>
+                    <View>
+                        <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.goBack()} >
+                            Potwierdź
+                        </Button>
+                    </View>
 
                 </Center>
                 </Box>

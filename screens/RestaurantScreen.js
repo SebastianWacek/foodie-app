@@ -15,7 +15,7 @@ import {
 import {ImageBackground, StyleSheet, TouchableOpacity} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import MainScreen from "./MainScreen";
-import React from "react";
+import React, {useState} from "react";
 
 export default function RestaurantScreen({route, navigation}){
     const {
@@ -33,6 +33,14 @@ export default function RestaurantScreen({route, navigation}){
         price4,
         price5,
     } = route.params;
+    const[price, setPrice] = useState([]);
+    const[dishName, setDishName] = useState([]);
+    console.log("Dishes ", dishName)
+    const sum = price.reduce(add, 0)
+    function add(accumulator, a) {
+        return accumulator + a;
+    }
+
     return(
         <Box w="100%" h="100%" backgroundColor="#F4BD57">
            <Box h={"40%"}>
@@ -58,7 +66,7 @@ export default function RestaurantScreen({route, navigation}){
                    <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price1}</Text>
                    </View>
                    <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
-                   <TouchableOpacity>
+                   <TouchableOpacity onPress={() => setPrice([...price, price1]) || setDishName([...dishName, dishName1])}>
                        <Image
                            source={require('./images/plus.png')}
                            alt={"Alt"}
@@ -66,7 +74,7 @@ export default function RestaurantScreen({route, navigation}){
 
                        />
                    </TouchableOpacity>
-                   <TouchableOpacity>
+                   <TouchableOpacity onPress={() => setPrice(price.splice(1, 3)) || setDishName(dishName.splice(1, 3))}>
                        <Image
                            source={require('./images/minus.png')}
                            alt={"Alt"}
@@ -83,7 +91,7 @@ export default function RestaurantScreen({route, navigation}){
                     </View>
 
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice([...price, price2]) || setDishName([...dishName, dishName2])}>
                             <Image
                                 source={require('./images/plus.png')}
                                 alt={"Alt"}
@@ -91,7 +99,7 @@ export default function RestaurantScreen({route, navigation}){
 
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice(price.splice(1, 3)) || setDishName(dishName.splice(1, 3))}>
                             <Image
                                 source={require('./images/minus.png')}
                                 alt={"Alt"}
@@ -108,7 +116,7 @@ export default function RestaurantScreen({route, navigation}){
                     </View>
 
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice([...price, price3]) || setDishName([...dishName, dishName3])}>
                             <Image
                                 source={require('./images/plus.png')}
                                 alt={"Alt"}
@@ -116,7 +124,7 @@ export default function RestaurantScreen({route, navigation}){
 
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice(price.splice(1, 3)) || setDishName(dishName.splice(1, 3))}>
                             <Image
                                 source={require('./images/minus.png')}
                                 alt={"Alt"}
@@ -132,7 +140,7 @@ export default function RestaurantScreen({route, navigation}){
                         <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price4}</Text>
                     </View>
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice([...price, price4]) || setDishName([...dishName, dishName4])}>
                             <Image
                                 source={require('./images/plus.png')}
                                 alt={"Alt"}
@@ -140,7 +148,7 @@ export default function RestaurantScreen({route, navigation}){
 
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice(price.splice(1, 3)) || setDishName(dishName.splice(1, 3))}>
                             <Image
                                 source={require('./images/minus.png')}
                                 alt={"Alt"}
@@ -157,7 +165,7 @@ export default function RestaurantScreen({route, navigation}){
                     </View>
 
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice([...price, price5]) || setDishName([...dishName, dishName5])}>
                             <Image
                                 source={require('./images/plus.png')}
                                 alt={"Alt"}
@@ -165,7 +173,7 @@ export default function RestaurantScreen({route, navigation}){
 
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => setPrice(price.splice(1, 3)) || setDishName(dishName.splice(1, 3))}>
                             <Image
                                 source={require('./images/minus.png')}
                                 alt={"Alt"}
@@ -173,15 +181,26 @@ export default function RestaurantScreen({route, navigation}){
 
                             />
                         </TouchableOpacity>
-
                     </View>
                 </View>
             </ScrollView>
             <TouchableOpacity>
                 <Button
                     style={styles.floatingButton}
-                    onPress = {()=>navigation.navigate('BasketScreen')}
-                >Zamawiam
+                    onPress = {()=>navigation.navigate('BasketScreen', {
+                        sum, dishName
+                    })}
+                >
+                    <View style={{flexDirection: "row", alignItems: "center", color: "white"}}>
+                    <View >
+                        <Text style={{color: "white", fontWeight: "bold"}}>
+                        Zamawiam
+                        </Text>
+                    </View>
+                <View style={{marginLeft: 10, backgroundColor: "white", width: 40,borderRadius:3, height: 40, alignItems: "center", justifyContent:"center"}}>
+                    <Text>{price.reduce(add, 0)}</Text>
+                </View>
+                    </View>
                 </Button>
             </TouchableOpacity>
         </Box>

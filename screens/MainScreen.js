@@ -17,9 +17,6 @@ import homar from "./images/homar.png";
 
 export default function MainScreen({navigation}){
 
-    const clickHandler = () => {
-        navigation.navigate("#")
-    }
     let pizza = require('./images/pizza.png')
     let kuchniaPolska = require('./images/kuchniapolska.png')
     let kebsy = require('./images/kebab.png')
@@ -65,15 +62,15 @@ export default function MainScreen({navigation}){
                             description: "Najlepsza pizza jaką jadłeś",
                             otherParam: pizza,
                             dishName1: "Capricioza",
-                            price1:19.99+"zł",
+                            price1:19.99,
                             dishName2: "Margheritta",
-                            price2: 24.99+"zł",
+                            price2: 24.99,
                             dishName3: "Italiana",
-                            price3: 26.99+"zł",
+                            price3: 26.99,
                             dishName4: "Hawajska",
-                            price4: 28.99+"zł",
+                            price4: 28.99,
                             dishName5: "Wegetariana",
-                            price5: 15.69+"zł"
+                            price5: 15.69
                         })}
                     >
                         <Image
@@ -90,15 +87,15 @@ export default function MainScreen({navigation}){
                                           description: "Polskie dania i napoje",
                                           otherParam: kuchniaPolska,
                                           dishName1: "Rosół",
-                                          price1:13.29+"zł",
+                                          price1:13.29,
                                           dishName2: "Pierogi",
-                                          price2: 22.59+"zł",
+                                          price2: 22.59,
                                           dishName3: "Schabowy z ziemniakami i surówką",
-                                          price3: 29.90+"zł",
+                                          price3: 29.90,
                                           dishName4: "Kluski z serem",
-                                          price4: 14.50+"zł",
+                                          price4: 14.50,
                                           dishName5: "Krokiety",
-                                          price5: 19.80+"zł"
+                                          price5: 19.80
                                       })}
                     >
                         <Image
@@ -114,15 +111,15 @@ export default function MainScreen({navigation}){
                                           description: "Tureckie kebaby",
                                           otherParam: kebsy,
                                           dishName1: "W bułce mały",
-                                          price1:14.00+"zł",
+                                          price1:14.00,
                                           dishName2: "W bułce duży",
-                                          price2: 16.00+"zł",
+                                          price2: 16.00,
                                           dishName3: "W cieście mały",
-                                          price3: 12.00+"zł",
+                                          price3: 12.00,
                                           dishName4: "W cieście duży",
-                                          price4: 16.00+"zł",
+                                          price4: 16.00,
                                           dishName5: "Kebab box",
-                                          price5: 22.59+"zł"
+                                          price5: 22.59
                                       })}
                     >
                         <Image
@@ -138,15 +135,15 @@ export default function MainScreen({navigation}){
                                           description: "Dania ze wszystkich stron świata",
                                           otherParam: kuchniaOrientalna,
                                           dishName1: "Ramen",
-                                          price1:19.99+"zł",
+                                          price1:19.99,
                                           dishName2: "Zupa curry",
-                                          price2: 24.99+"zł",
+                                          price2: 24.99,
                                           dishName3: "Kurczak po koreańsku",
-                                          price3: 26.99+"zł",
+                                          price3: 26.99,
                                           dishName4: "Zupa",
-                                          price4: 28.99+"zł",
+                                          price4: 28.99,
                                           dishName5: "Ryż",
-                                          price5: 15.69+"zł"
+                                          price5: 15.69
                                       })}
                     >
                         <Image
@@ -181,15 +178,15 @@ export default function MainScreen({navigation}){
                                 description: "Najlepsza pizza jaką jadłeś",
                                 otherParam: pizza,
                                 dishName1: "Capricioza",
-                                price1:19.99+"zł",
+                                price1:19.99,
                                 dishName2: "Margheritta",
-                                price2: 24.99+"zł",
+                                price2: 24.99,
                                 dishName3: "Italiana",
-                                price3: 26.99+"zł",
+                                price3: 26.99,
                                 dishName4: "Hawajska",
-                                price4: 28.99+"zł",
+                                price4: 28.99,
                                 dishName5: "Wegetariana",
-                                price5: 15.69+"zł"
+                                price5: 15.69
                             })}>
                         <Image
                             source={pizza}
@@ -206,15 +203,15 @@ export default function MainScreen({navigation}){
                                           description: "Polskie dania i napoje",
                                           otherParam: kuchniaPolska,
                                           dishName1: "Rosół",
-                                          price1:13.29+"zł",
+                                          price1:13.29,
                                           dishName2: "Pierogi",
-                                          price2: 22.59+"zł",
+                                          price2: 22.59,
                                           dishName3: "Schabowy z ziemniakami i surówką",
-                                          price3: 29.90+"zł",
+                                          price3: 29.90,
                                           dishName4: "Kluski z serem",
-                                          price4: 14.50+"zł",
+                                          price4: 14.50,
                                           dishName5: "Krokiety",
-                                          price5: 19.80+"zł"
+                                          price5: 19.80
                                       })}
                     >
                         <Image
@@ -230,15 +227,15 @@ export default function MainScreen({navigation}){
                                           description: "Tureckie kebaby",
                                           otherParam: kebsy,
                                           dishName1: "W bułce mały",
-                                          price1:14.00+"zł",
+                                          price1:14.00,
                                           dishName2: "W bułce duży",
-                                          price2: 16.00+"zł",
+                                          price2: 16.00,
                                           dishName3: "W cieście mały",
-                                          price3: 12.00+"zł",
+                                          price3: 12.00,
                                           dishName4: "W cieście duży",
-                                          price4: 16.00+"zł",
+                                          price4: 16.00,
                                           dishName5: "Kebab box",
-                                          price5: 22.59+"zł"
+                                          price5: 22.59
                                       })}
                     >
                         <Image
@@ -254,15 +251,15 @@ export default function MainScreen({navigation}){
                                           description: "Dania ze wszystkich stron świata",
                                           otherParam: kuchniaOrientalna,
                                           dishName1: "Ramen",
-                                          price1:19.99+"zł",
+                                          price1:19.99,
                                           dishName2: "Zupa curry",
-                                          price2: 24.99+"zł",
+                                          price2: 24.99,
                                           dishName3: "Kurczak po koreańsku",
-                                          price3: 26.99+"zł",
+                                          price3: 26.99,
                                           dishName4: "Zupa",
-                                          price4: 28.99+"zł",
+                                          price4: 28.99,
                                           dishName5: "Ryż",
-                                          price5: 15.69+"zł"
+                                          price5: 15.69
                                       })}
                     >
                         <Image
@@ -296,15 +293,15 @@ export default function MainScreen({navigation}){
                                            description: "Spaghetti Carbonara",
                                            otherParam: spaghetti,
                                            dishName1: "Carbonara",
-                                           price1:16.00+"zł",
+                                           price1:16.00,
                                            dishName2: "Carbonara z pieczarkami",
-                                           price2: 16.80+"zł",
+                                           price2: 16.80,
                                            dishName3: "Podwójna carbonara",
-                                           price3: 30.00+"zł",
+                                           price3: 30.00,
                                            dishName4: "Carbonara wege",
-                                           price4: 24.50+"zł",
+                                           price4: 24.50,
                                            dishName5: "carbonara z makaronem ",
-                                           price5: 15+"zł"
+                                           price5: 15
                                        })}>
                         <ImageBackground source={spaghetti} style={{width: '100%', height: '100%'}}>
 
@@ -319,15 +316,15 @@ export default function MainScreen({navigation}){
                                            description: "Owoce morza",
                                            otherParam: homar,
                                            dishName1: "Krewetki",
-                                           price1:52+"zł",
+                                           price1:52,
                                            dishName2: "Ośmiornice",
-                                           price2: 77+"zł",
+                                           price2: 77,
                                            dishName3: "Ślimaki",
-                                           price3: 48+"zł",
+                                           price3: 48,
                                            dishName4: "Ostrygi",
-                                           price4: 83+"zł",
+                                           price4: 83,
                                            dishName5: "Homar",
-                                           price5: 270+"zł"
+                                           price5: 270
                                        })}
 
                     >
@@ -345,15 +342,15 @@ export default function MainScreen({navigation}){
                                            description: "Japońskie sushi i dodatki",
                                            otherParam: sushi,
                                            dishName1: "Nigiri z łososiem",
-                                           price1:60.00+"zł",
+                                           price1:60.00,
                                            dishName2: "Tekka maki",
-                                           price2: 95.00+"zł",
+                                           price2: 95.00,
                                            dishName3: "Maki z awokado",
-                                           price3: 74.00+"zł",
+                                           price3: 74.00,
                                            dishName4: "Futo-maki",
-                                           price4: 128.00+"zł",
+                                           price4: 128.00,
                                            dishName5: "Temarizushi",
-                                           price5: 210.00+"zł"
+                                           price5: 210.00
                                        })}
                     >
                         <ImageBackground source={sushi} style={{width: '100%', height: '100%'}}>

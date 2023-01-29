@@ -13,6 +13,7 @@ import PaymentScreen from "./screens/PaymentScreen";
 import BasketScreen from "./screens/BasketScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
 import HistoryScreen from "./screens/HistoryScreen"
+import RegisterScreen from './screens/RegisterScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
               headerShown: false,
         }}>
           <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="MainScreen" component={MainScreen} />
           <Stack.Screen name="Localization" component={Localization} />
           <Stack.Screen name="PaymentScreen" component={PaymentScreen} />

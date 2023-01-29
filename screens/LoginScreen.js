@@ -2,6 +2,7 @@
 import {Box, Button, Center, FormControl, Heading, Stack, Image, Input, Link, VStack} from "native-base";
 import {Text} from "react-native";
 import MainScreen from "./MainScreen";
+import RegisterScreen from "./RegisterScreen";
 
 export default function LoginScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
@@ -39,13 +40,9 @@ export default function LoginScreen({navigation}){
                 </Button>
                 </Center>
                 <VStack mb="3" alignItems="center">
-                     <Link _text={{
-                        color: "indigo.500",
-                        fontWeight: "small",
-                        fontSize: "sm"
-                    }} href="#">
-                        Załóż konto
-                    </Link>
+                    <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('RegisterScreen')} >
+                        rejestracja
+                    </Button>
                 </VStack>
             </VStack>
             </Box>
