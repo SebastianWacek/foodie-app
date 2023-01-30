@@ -14,6 +14,7 @@ import BasketScreen from "./screens/BasketScreen";
 import RestaurantScreen from "./screens/RestaurantScreen";
 import HistoryScreen from "./screens/HistoryScreen"
 import RegisterScreen from './screens/RegisterScreen';
+import MainScrr from "./navigation/MainScrr";
 
 const Stack = createStackNavigator();
 
@@ -27,7 +28,7 @@ export default function App() {
         }}>
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-          <Stack.Screen name="MainScreen" component={MainScreen} />
+          <Stack.Screen name="MainScreen" component={MainScrr} />
           <Stack.Screen name="Localization" component={Localization} />
           <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
           <Stack.Screen name="BasketScreen" component={BasketScreen} />

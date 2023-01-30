@@ -2,19 +2,9 @@ import React from 'react';
 import {Text, StyleSheet, View, ImageBackground, TouchableHighlight, TouchableOpacity} from 'react-native';
 import {Box, Button, Center, Heading, Image, Input, ScrollView} from "native-base";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import BasketScreen from "./BasketScreen";
 import LoginScreen from "./LoginScreen";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Localization from "./Localization";
-import PaymentScreen from "./PaymentScreen";
-import {useNavigation} from "@react-navigation/native";
-import img1 from "./images/pizza.png";
-import kuchniaPolska from "./images/kuchniapolska.png";
-import pizza from "./images/pizza.png";
-import kebsy from "./images/kebab.png";
-import kuchniaOrientalna from "./images/orientalne.png";
-import spaghetti from "./images/carbonara.png";
-import homar from "./images/homar.png";
-import RegisterScreen from './RegisterScreen';
+
 
 export default function MainScreen({navigation}){
 
@@ -25,8 +15,9 @@ export default function MainScreen({navigation}){
     let spaghetti = require('./images/carbonara.png')
     let homar = require('./images/homar.png')
     let sushi = require('./images/sushi.png')
-
+    const Tabs = createBottomTabNavigator();
     return (
+
         <Center w="100%" h="100%" backgroundColor="#F4BD57">
 
             <Image
@@ -362,7 +353,10 @@ export default function MainScreen({navigation}){
                     </TouchableOpacity>
                 </ScrollView>
             </ScrollView>
+
         </Center>
+
+
     );
 }
 
