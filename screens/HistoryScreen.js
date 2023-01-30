@@ -32,15 +32,14 @@ export default function BasketScreen({navigation}){
         </TouchableOpacity>
         <Image
             source={require("./images/logo.png")}
-            style={{width: 140, height: 140,marginTop:10, borderRadius: 100}}
+            style={{width: 140, height: 140,marginTop:40, borderRadius: 100}}
             alt={"Alt"}
         />
 <Box>
     <Text style={{fontSize: 23, fontWeight: 'bold', marginTop:40}}>Twoje zamowienie jest w trakcie realizacji</Text>
-    <HStack space={2} justifyContent="center">
+    <HStack space={5} justifyContent="center">
         <Spinner accessibilityLabel="Loading posts" />
         <Heading color="primary.500" fontSize="md">
-            Loading
         </Heading>
     </HStack>
 </Box>

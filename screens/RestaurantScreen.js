@@ -63,7 +63,7 @@ export default function RestaurantScreen({route, navigation}){
                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5, backgroundColor:"white"}}>
                    <View>
                    <Text style={{fontWeight:'bold', fontSize:20, textAlign:'center', marginTop:5}}>{dishName1}</Text>
-                   <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price1}</Text>
+                   <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price1} zł</Text>
                    </View>
                    <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
                    <TouchableOpacity onPress={() => setPrice([...price, price1]) || setDishName([...dishName, dishName1])}>
@@ -213,13 +213,19 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30,
         marginTop:20,
-        marginLeft: 10
+        marginLeft: 10,
+        borderWidth:1,
+        borderRadius: 20,
+        borderColor: "black",
     },
     floatingButtonStyleMinus: {
         width: 30,
         height: 30,
         marginTop:20,
         marginLeft:320,
+        borderWidth:1,
+        borderRadius: 20,
+        borderColor: "black"
     },
     floatingButton: {
         alignItems:'center',

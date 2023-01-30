@@ -26,7 +26,7 @@ export default function PaymentScreen({navigation}){
             <Center>
                 <Image
                     source={require("./images/logo.png")}
-                    style={{width: 120, height: 120, borderRadius: 100, marginBottom: 10, marginTop:3}}
+                    style={{width: 160, height: 160, borderRadius: 100, marginTop:10}}
                     alt={"Alt"}
                 />
 
@@ -89,15 +89,7 @@ export default function PaymentScreen({navigation}){
                     />
                 </TouchableOpacity>
             </Stack>
-
-            <Heading size="lg" fontWeight="bold">
-                Dostawa
-            </Heading>
-
             <Center>
-                <Button mt="2" backgroundColor="#63C5C5" width="250" height="12" borderRadius="10">
-                    Użyj mojej lokalizacji
-                </Button>
                 <Button mt="2" backgroundColor="#63C5C5" width="150" height="12" borderRadius="10" mb="20" onPress={()=>navigation.navigate('Localization')} >
                     Wprowadź adres
                 </Button>
@@ -119,7 +111,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         left: 10,
-        top: 60
+        top: 80
     },
     floatingButtonStyle: {
         resizeMode: 'contain',

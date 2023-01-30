@@ -170,18 +170,18 @@ export default function Localization({navigation}) {
 
                 />
             </TouchableOpacity>
-            <ScrollView>
+            <ScrollView h="21%">
                 <Box borderWidth={1}>
                 <Text mt="5" textAlign="center" borderTop="2" fontSize="25" fontWeight="bold">
                     Podaj adres lub wskaż na mapie
                 </Text>
-                <View flex="1">
+                <View>
                     <Center>
                             <View mt="10">
-                                <Input placeholder="Adres" value={street} borderRadius="18" w="80%" placeholderTextColor="black" backgroundColor="white"/>
+                                <Input placeholder="Adres" value={street+" "+buildingNum} borderRadius="18" w="80%" placeholderTextColor="black" backgroundColor="white"/>
                             </View>
                             <View mt="10">
-                                <Input placeholder="Miejscowość" value={city} borderRadius="18" w="80%" placeholderTextColor="black" backgroundColor="white"/>
+                                <Input placeholder="Miejscowość" value={postCode+" "+city} borderRadius="18" w="80%" placeholderTextColor="black" backgroundColor="white"/>
                             </View>
                     </Center>
                 </View>
@@ -192,11 +192,10 @@ export default function Localization({navigation}) {
                     </Button>
                 </View>
                     <View>
-                        <Button borderRadius="10" mt="3" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.goBack()} >
+                        <Button borderRadius="10" mt="3" mb={7} backgroundColor="#63C5C5" width="150" onPress={()=>navigation.goBack()} >
                             Potwierdź
                         </Button>
                     </View>
-
                 </Center>
                 </Box>
             </ScrollView>
