@@ -25,7 +25,7 @@ export default function LoginScreen({navigation}){
                     <FormControl>
                         <FormControl.Label>
                             <Text style = {{fontSize: 25, fontWeight: "bold"}}>
-                                Login
+                                Logi
                             </Text>
                         </FormControl.Label>
                         <Input w="100%"  backgroundColor="white" onChangeText={setLogin}/>
