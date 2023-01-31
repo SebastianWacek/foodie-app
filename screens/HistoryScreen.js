@@ -17,7 +17,7 @@ import { NativeBaseProvider } from 'native-base';
 import {Image} from 'native-base';
 import {useState} from "react";
 
-export default function BasketScreen({navigation}){
+export default function HistoryScreen({route, navigation}){
 
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <TouchableOpacity
@@ -44,27 +44,8 @@ export default function BasketScreen({navigation}){
     </HStack>
 </Box>
         <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{justifyContent: 'center'}}>
-            <Box safeArea flex="1" mt={25} maxW="100%">
-                <Heading size="lg"  fontWeight="900" fontSize="28" >
-                    Historia Twoich zamówień
-                </Heading>
+            <Box safeArea flex="1" mt={25} w="100%" maxW="100%">
 
-                <Stack mb="2" mt="10"  direction={{
-                    base: "column",
-                }} space={5} mx={{}}>
-                    <TouchableOpacity
-                        style={{width:320, height:60,backgroundColor:"#EBE2E2", borderRadius:5 }}>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={{width:320, height:60,backgroundColor:"#EBE2E2", borderRadius:5 }}>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={{width:320, height:60,backgroundColor:"#EBE2E2", borderRadius:5 }}>
-                    </TouchableOpacity>
-
-                </Stack>
             </Box>
         </ScrollView>
 

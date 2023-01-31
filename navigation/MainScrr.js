@@ -2,12 +2,11 @@ import MainScreen from "../screens/MainScreen";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import PaymentScreen from "../screens/PaymentScreen";
 import BasketScreen from "../screens/BasketScreen";
-import Authors from "../screens/Authors";
 import {Settings} from "react-native";
-import Contact from "../screens/Contact";
 import CustomDrawer from "./CustomDrawer";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import HistoryScreen from "../screens/HistoryScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -29,14 +28,14 @@ export default function MainScrr({navigation}){
                     <Ionicons name="home-outline" size={22} color={color} />
                 )
             }} />
-            <Drawer.Screen name = "Autorzy"  component = {Authors}
+            <Drawer.Screen name = "Autorzy"  component = {HistoryScreen}
                            options={{
                                drawerIcon: ({color}) => (
                                    <Ionicons name="person-outline" size={22} color={color} />
                                )
                            }}
             />
-            <Drawer.Screen name = "Kontakt" component = {Contact}
+            <Drawer.Screen name = "Kontakt" component = {HistoryScreen}
                            options={{
                                drawerIcon: ({color}) => (
                                    <Ionicons name="chatbox-ellipses-outline" size={22} color={color} />

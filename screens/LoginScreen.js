@@ -3,8 +3,12 @@ import {Box, Button, Center, FormControl, Heading, Stack, Image, Input, Link, VS
 import {Text} from "react-native";
 import MainScreen from "./MainScreen";
 import RegisterScreen from "./RegisterScreen";
+import {useState} from "react";
 
 export default function LoginScreen({navigation}){
+
+    const [login, setLogin] = useState("");
+
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <Image
             source={require("./images/logo.png")}
@@ -24,7 +28,7 @@ export default function LoginScreen({navigation}){
                                 Login
                             </Text>
                         </FormControl.Label>
-                        <Input w="100%"  backgroundColor="white"/>
+                        <Input w="100%"  backgroundColor="white" onChangeText={setLogin}/>
                     </FormControl>
                     <FormControl>
                         <FormControl.Label>
@@ -35,7 +39,8 @@ export default function LoginScreen({navigation}){
                         <Input type="password" backgroundColor="white"/>
                     </FormControl>
                     <Center>
-                        <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen')} >
+                        <Button borderRadius="10" mt="5" backgroundColor="#63C5C5" width="150" onPress={()=>navigation.navigate('MainScreen'
+                            )} >
                             Zaloguj
                         </Button>
                     </Center>

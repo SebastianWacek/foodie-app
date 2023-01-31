@@ -13,8 +13,8 @@ import {
     VStack
 } from "native-base";
 import {ImageBackground, StyleSheet, TouchableOpacity} from "react-native";
-import {useRoute} from "@react-navigation/native";
-import MainScreen from "./MainScreen";
+
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import React, {useState} from "react";
 
 export default function RestaurantScreen({route, navigation}){
@@ -60,7 +60,7 @@ export default function RestaurantScreen({route, navigation}){
                 </Text>
             </View>
             <ScrollView contentContainerStyle={{alignItems:'center'}}>
-               <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5, backgroundColor:"white"}}>
+               <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5,borderWidth:1 , backgroundColor:"rgba(245,180,145,0.6)"}}>
                    <View>
                    <Text style={{fontWeight:'bold', fontSize:20, textAlign:'center', marginTop:5}}>{dishName1}</Text>
                    <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price1} zł</Text>
@@ -84,10 +84,10 @@ export default function RestaurantScreen({route, navigation}){
                    </TouchableOpacity>
                    </View>
                </View>
-                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5, backgroundColor:"white"}}>
+                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5,borderWidth:1 , backgroundColor:"rgba(245,180,145,0.6)"}}>
                     <View>
                         <Text style={{fontWeight:'bold', fontSize:20, textAlign:'center', marginTop:5}}>{dishName2}</Text>
-                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price2}</Text>
+                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price2} zł</Text>
                     </View>
 
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
@@ -109,10 +109,10 @@ export default function RestaurantScreen({route, navigation}){
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5, backgroundColor:"white"}}>
+                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5,borderWidth:1 , backgroundColor:"rgba(245,180,145,0.6)"}}>
                     <View>
                         <Text style={{fontWeight:'bold', fontSize:20, textAlign:'center', marginTop:5}}>{dishName3}</Text>
-                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price3}</Text>
+                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price3} zł</Text>
                     </View>
 
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
@@ -134,10 +134,10 @@ export default function RestaurantScreen({route, navigation}){
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5, backgroundColor:"white"}}>
+                <View style={{ width: '95%', marginTop:10, height: 100,borderRadius:5,borderWidth:1 , backgroundColor:"rgba(245,180,145,0.6)"}}>
                     <View>
                         <Text style={{fontWeight:'bold', fontSize:20, textAlign:'center', marginTop:5}}>{dishName4}</Text>
-                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price4}</Text>
+                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price4} zł</Text>
                     </View>
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>
                         <TouchableOpacity onPress={() => setPrice([...price, price4]) || setDishName([...dishName, dishName4])}>
@@ -158,10 +158,10 @@ export default function RestaurantScreen({route, navigation}){
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{ width: '95%', marginTop:10, marginBottom:30, height: 100,borderRadius:5, backgroundColor:"white"}}>
+                <View style={{ width: '95%', marginTop:10, marginBottom:30, height: 100,borderRadius:5,borderWidth:1 , backgroundColor:"rgba(245,180,145,0.6)"}}>
                     <View>
                         <Text style={{fontWeight:'bold', fontSize:20, textAlign:'center', marginTop:5}}>{dishName5}</Text>
-                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price5}</Text>
+                        <Text style={{fontWeight:'500', fontSize:20, textAlign:'center', marginTop:5}}>{price5} zł</Text>
                     </View>
 
                     <View style = {{flexDirection:'row', flexWrap:'wrap'}}>

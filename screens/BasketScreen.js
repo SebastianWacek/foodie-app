@@ -83,21 +83,6 @@ export default function BasketScreen({route, navigation}){
                         {dishName[2]}
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.dishContainer}>
-                    <Text style={styles.dishText}>
-                        {dishName[3]}
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.dishContainer}>
-                    <Text style={styles.dishText}>
-                        {dishName[4]}
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.dishContainer}>
-                    <Text style={styles.dishText}>
-                        {dishName[5]}
-                    </Text>
-                </TouchableOpacity>
             </Stack>
         </Box>
         </ScrollView>
@@ -150,11 +135,15 @@ const styles = StyleSheet.create({
     },
     dishContainer: {
         width:320,
-        height:40,
+        height:60,
         fontWeight: "bold",
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 1,
+        borderRadius: 20
     },
     dishText: {
+        marginTop: 10,
         fontWeight: "bold",
         height: 40,
         fontSize:15,

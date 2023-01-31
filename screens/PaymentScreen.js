@@ -6,7 +6,7 @@ import {useState} from "react";
 
 import HistoryScreen from './HistoryScreen'
 
-export default function PaymentScreen({navigation}){
+export default function PaymentScreen({route,navigation}){
 
 
     const [index, setIndex] = useState(null);
