@@ -7,6 +7,7 @@ import CustomDrawer from "./CustomDrawer";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import HistoryScreen from "../screens/HistoryScreen";
+import LoginScreen from "../screens/LoginScreen";
 
 const Drawer = createDrawerNavigator();
 

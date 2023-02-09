@@ -4,6 +4,7 @@ import {Box, Button, Center, Heading, Image, Input, ScrollView} from "native-bas
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import BasketScreen from "./BasketScreen";
 import LoginScreen from "./LoginScreen";
+import {auth} from '../firebase'
 
 
 export default function MainScreen({route, navigation}){
