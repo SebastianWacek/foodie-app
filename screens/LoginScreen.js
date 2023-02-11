@@ -8,8 +8,8 @@ import {auth} from '../firebase'
 
 export default function LoginScreen({navigation}){
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('example@mail.com')
+    const [password, setPassword] = useState('123qwe')
 
 
     useEffect(() => {

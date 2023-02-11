@@ -2,8 +2,8 @@ import {Box, Button, Center, FormControl, Heading, Stack, HStack, Input, Link, V
 import {StyleSheet, Text, TouchableHighlight, TouchableOpacity} from "react-native";
 import { NativeBaseProvider } from 'native-base';
 import {Image, useToast} from 'native-base';
-import {useState} from "react";
-
+import {useEffect, useState} from "react";//
+import { useDerivedValue } from "react-native-reanimated";//
 
 export default function BasketScreen({route, navigation}){
     const {
@@ -18,6 +18,15 @@ export default function BasketScreen({route, navigation}){
             return 8;
         }
     }
+
+    function order() {
+        if (dishName.length < 1) {
+          alert("Koszyk jest pusty.");
+          return;
+        }
+        navigation.navigate('PaymentScreen');
+      }
+      
     const toast = useToast();
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <TouchableOpacity

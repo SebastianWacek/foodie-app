@@ -3,7 +3,7 @@ import {Text, StyleSheet, View, ImageBackground, TouchableHighlight, TouchableOp
 import {Box, Button, Center, Heading, Image, Input, ScrollView} from "native-base";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import BasketScreen from "./BasketScreen";
-import LoginScreen from "./LoginScreen";
+import LoginScreen from "./HistoryScreen";
 import {auth} from '../firebase'
 
 
@@ -32,6 +32,7 @@ export default function MainScreen({route, navigation}){
                     color: "warmGray.50"
                 }}>
                 </Heading>
+                  <Button onPress={() => navigation.navigate('HistoryScreen')}>Moje zamówienia</Button>
             </Box>
             <ScrollView w="100%" backgroundColor={"#F4BD57"} showsVerticalScrollIndicator={false} contentContainerStyle={{justifyContent: 'center'}}>
                 <Text style={{marginTop:5, marginLeft:20, fontSize:25, fontWeight: "bold" }}>Kategorie</Text>

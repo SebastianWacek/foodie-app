@@ -1,6 +1,6 @@
 import {Box, Button, Center, FormControl, Heading, Stack, Image, Input, Link, VStack} from "native-base";
 import {Text} from "react-native";
-import LoginScreen from "./LoginScreen";
+import LoginScreen from "./HistoryScreen";
 
 export default function RegisterScreen({navigation}){
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">

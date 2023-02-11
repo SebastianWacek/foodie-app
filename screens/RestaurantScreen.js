@@ -16,6 +16,7 @@ import {ImageBackground, StyleSheet, TouchableOpacity} from "react-native";
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import React, {useState} from "react";
+import { MainContext } from "../context";
 
 export default function RestaurantScreen({route, navigation}){
     const {
@@ -39,6 +40,22 @@ export default function RestaurantScreen({route, navigation}){
     const sum = price.reduce(add, 0)
     function add(accumulator, a) {
         return accumulator + a;
+    }
+
+    const {setBasketInfo} = useContext(MainContext);
+    function order() {
+      const orderDate = new Date();
+      // utworzenie obiektu zamówienia i zapisanie go w useState dostarczonym poprzez globalny kontekst
+      setBasketInfo({
+        prices: price,
+        dishes: dishName,
+        orderDate: orderDate.toLocaleString(), /* zapisanie daty jako sformatowany tekst, potrzebne do bazy */
+        address: '',
+        city: ''
+      });
+      navigation.navigate('BasketScreen', {
+        sum, dishName
+      });
     }
 
     return(

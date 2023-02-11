@@ -5,7 +5,8 @@ import MainScreen from "./MainScreen";
 
 import axios from 'axios';
 import * as Location from 'expo-location';
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { MainContext } from "../context";
 
 export default function Localization({navigation}) {
     const [location, setLocation] = useState(null);
@@ -15,6 +16,8 @@ export default function Localization({navigation}) {
     const [postCode, setPostCode] = useState("");
     const [street, setStreet] = useState("");
     const [buildingNum, setBuildingNum] = useState("");
+
+    const {basketInfo, setBasketInfo} = useContext(MainContext);
 
     let alt = "Nie ma";
     const clickHandler = () => {
@@ -96,6 +99,16 @@ export default function Localization({navigation}) {
         
         setWaitingForLocation(false);
     };
+
+    const confirm = () => {
+        setBasketInfo(prevState => ({
+          ...prevState,
+          address: street+' '+buildingNum,
+          city: postCode+' '+city
+        }));
+  
+        navigation.goBack();
+      };
 
     return (
         <View flex="1" w="100%" backgroundColor="#F4BD57" style={{ justifyContent: 'space-between' }}>

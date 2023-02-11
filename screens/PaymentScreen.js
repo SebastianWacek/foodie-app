@@ -3,13 +3,21 @@ import {StyleSheet, Text, TouchableHighlight, TouchableOpacity} from "react-nati
 import { NativeBaseProvider } from 'native-base';
 import {Image} from 'native-base';
 import {useState} from "react";
-
-import HistoryScreen from './HistoryScreen'
+import { MainContext } from "../context";
 
 export default function PaymentScreen({route,navigation}){
 
 
     const [index, setIndex] = useState(null);
+    const {basketInfo} = useContext(MainContext);
+
+    function order() {
+      if (!basketInfo.address || !basketInfo.city) {
+        alter("Nie podano adresu.");
+        return;
+      }
+      navigation.navigate('SummaryScreen');
+    }
 
     return <Center w="100%" h="100%" backgroundColor="#F4BD57">
         <TouchableOpacity
